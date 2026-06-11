@@ -31,7 +31,8 @@
 
 #bio figure {
     margin: 0;
-    width: 720px;
+    width: 100%;
+    max-width: 720px;
     align-self: start;
 }
 
@@ -52,10 +53,16 @@
 @media (max-width: 768px) {
     .bio-content {
         flex-direction: column;
+        align-items: center;
+    }
+
+    #bio figure {
+        width: 100%;
+        max-width: 560px;
     }
 
     #bio img {
-        max-width: 260px;
+        max-width: 100%;
         margin: 12px auto 0;
     }
 }
