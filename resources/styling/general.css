@@ -1,0 +1,115 @@
+/* General Styles - Applied to All Pages */
+
+:root {
+    --primary-dark: #1f2937;
+    --text-light: #d1d5db;
+    --text-dark: #222;
+    --bg-light: #f4f5f7;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-dark);
+    background: var(--bg-light);
+}
+
+/* Header Styles */
+header {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 24px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#main_title h1,
+#main_title h2 {
+    margin: 0;
+}
+
+#main_title h1 {
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+}
+
+#main_title h2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--text-light);
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    padding: 0;
+    margin: 16px 0 0;
+}
+
+nav li {
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav li:hover {
+    color: var(--white);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 20px 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 18px 14px;
+    }
+
+    #main_title h1 {
+        font-size: 1.5rem;
+    }
+
+    #main_title h2 {
+        font-size: 0.95rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    main {
+        margin: 24px auto;
+        padding: 0 14px 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 14px 10px;
+    }
+
+    #main_title h1 {
+        font-size: 1.3rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav li {
+        font-size: 0.9rem;
+    }
+}
