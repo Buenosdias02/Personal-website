@@ -31,11 +31,13 @@ header {
 #main_title h1,
 #main_title h2 {
     margin: 0;
+    font-family: 'Tektur', sans-serif;
 }
 
 #main_title h1 {
     font-size: 1.8rem;
     margin-bottom: 4px;
+    font-weight: bold;
 }
 
 #main_title h2 {
@@ -51,6 +53,8 @@ nav ul {
     gap: 18px;
     padding: 0;
     margin: 16px 0 0;
+    font-family: 'Tektur', sans-serif;
+    justify-content: flex-end;
 }
 
 nav li {
@@ -61,6 +65,19 @@ nav li {
 
 nav li:hover {
     color: var(--white);
+}
+
+/* Anchor styling inside nav */
+nav a {
+    color: inherit;
+    text-decoration: none;
+    padding: 6px 8px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: var(--white);
+    text-decoration: underline;
 }
 
 /* Main Content */
