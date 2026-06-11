@@ -8,6 +8,14 @@
     --white: #ffffff;
 }
 
+body.night-mode {
+    --primary-dark: #0f172a;
+    --text-light: #e0e7ff;
+    --text-dark: #ffffff;
+    --bg-light: #0f172a;
+    --white: #1e293b;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +26,7 @@ body {
     font-family: Arial, sans-serif;
     color: var(--text-dark);
     background: var(--bg-light);
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 /* Header Styles */
@@ -26,6 +35,14 @@ header {
     color: var(--white);
     padding: 24px 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+#main_title {
+    flex: 1;
 }
 
 #main_title h1,
@@ -47,14 +64,20 @@ header {
 }
 
 /* Navigation Bar */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 24px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 18px;
     padding: 0;
-    margin: 16px 0 0;
+    margin: 0;
     font-family: 'Tektur', sans-serif;
-    justify-content: flex-end;
 }
 
 nav li {
@@ -80,6 +103,77 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Night Mode Button */
+#night-mode-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-light);
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: inherit;
+}
+
+#night-mode-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--white);
+}
+
+body.night-mode #night-mode-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #e0e7ff;
+}
+
+body.night-mode #night-mode-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+body.night-mode {
+    color: #ffffff;
+    background: #0b1224;
+}
+
+body.night-mode header,
+body.night-mode .card,
+body.night-mode .contact-info,
+body.night-mode #bio,
+body.night-mode .language-grid,
+body.night-mode .project-grid {
+    background: #111827;
+}
+
+body.night-mode nav li,
+body.night-mode nav a,
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode h3,
+body.night-mode p,
+body.night-mode .project-description,
+body.night-mode .project-languages,
+body.night-mode .language,
+body.night-mode .contact-info p,
+body.night-mode .contact-info em {
+    color: #ffffff;
+}
+
+body.night-mode .language {
+    background: #1f2937;
+    color: #cbd5e1;
+}
+
+body.night-mode .card {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode #main_title h2 {
+    color: #cbd5e1;
+}
+
 /* Main Content */
 main {
     max-width: 1200px;
@@ -91,6 +185,13 @@ main {
 @media (max-width: 768px) {
     header {
         padding: 18px 14px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    #main_title {
+        width: 100%;
+        flex-basis: 100%;
     }
 
     #main_title h1 {
@@ -99,6 +200,17 @@ main {
 
     #main_title h2 {
         font-size: 0.95rem;
+    }
+
+    #night-mode-btn {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    nav {
+        width: 100%;
+        flex-basis: 100%;
+        margin-left: 0;
     }
 
     nav ul {
@@ -115,10 +227,16 @@ main {
 @media (max-width: 480px) {
     header {
         padding: 14px 10px;
+        gap: 8px;
     }
 
     #main_title h1 {
         font-size: 1.3rem;
+    }
+
+    #night-mode-btn {
+        padding: 5px 8px;
+        font-size: 0.8rem;
     }
 
     nav ul {

@@ -55,6 +55,23 @@
     font-size: 0.95rem;
 }
 
+body.night-mode .project-grid .card h3 {
+    color: #ffffff;
+}
+
+body.night-mode .project-grid .card {
+    background: #111827;
+}
+
+body.night-mode .project-description {
+    color: #e5e7eb;
+}
+
+body.night-mode .language {
+    background: #1f2937;
+    color: #dbeafe;
+}
+
 /* Language Icons Section */
 .language-grid {
     display: flex;
