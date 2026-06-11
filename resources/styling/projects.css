@@ -85,7 +85,8 @@ body.night-mode .language {
 }
 
 .language-grid .card {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
     box-shadow: none;
     padding: 0;
     min-height: auto;
@@ -94,12 +95,16 @@ body.night-mode .language {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .language-grid .card:hover {
     transform: scale(1.1);
     box-shadow: none;
+}
+
+body.night-mode .language-grid .card {
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .language-grid .card img {
