@@ -1,0 +1,130 @@
+/* Projects page specific styles */
+
+.project-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-bottom: 48px;
+}
+
+.project-grid .card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 240px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-grid .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-grid .card h3 {
+    margin: 0 0 14px;
+    font-size: 1.2rem;
+    color: #111827;
+    font-weight: 600;
+}
+
+.project-languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.language {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.project-description {
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+/* Language Icons Section */
+.language-grid {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 32px 16px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.language-grid .card {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    min-height: auto;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.language-grid .card:hover {
+    transform: scale(1.1);
+    box-shadow: none;
+}
+
+.language-grid .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .language-grid {
+        gap: 16px;
+        padding: 24px 12px;
+    }
+
+    .language-grid .card {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .project-grid .card {
+        padding: 16px;
+        min-height: 200px;
+    }
+
+    .language-grid {
+        gap: 12px;
+        padding: 16px 8px;
+    }
+
+    .language-grid .card {
+        width: 60px;
+        height: 60px;
+    }
+}
